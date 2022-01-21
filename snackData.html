@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+</body>
+</html>
+<script>
+var snackArr = [
+{
+   image_url: "https://www.bigbasket.com/media/uploads/p/s/40160403_4-tasties-gol-mathri.jpg ",
+   name: "Gol Mathri ",
+   price: 68,
+   strikedoffPrice: 99,
+   deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40200874_3-tasties-namkeen-banana-pepper-chips.jpg",
+    name: "Namkeen - Banana Pepper Chips ",
+    price: 56,
+    strikedoffPrice: 66,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40115863_9-tasties-namkeen-all-in-one-mixture.jpg",
+    name: "Namkeen - All In One Mixture",
+    price: 36,
+    strikedoffPrice: 49,
+    deliveryTime: " Standard Delivery: 21 Jan, 2:00PM - 4:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40160400_4-tasties-mini-samosa.jpg",
+    name: "Mini samosa",
+    price: 47,
+    strikedoffPrice: 99,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40212148_1-fresho-signature-spicy-paprika-croutons-bites.jpg",
+    name: "Spicy Paprika Croutons Bites",
+    price: 89,
+    strikedoffPrice: 99,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40109363_4-tasties-papad-moong-special.jpg",
+    name: "Papad - Moong Special",
+    price: 85,
+    strikedoffPrice: 79,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40196816_3-tasties-nacho-chips-jalapeno.jpg",
+    name: "Nacho Chips - Jalapeno",
+    price: 45,
+    strikedoffPrice: 99,
+    deliveryTime: " Standard Delivery: 21 Jan, 2:00PM - 4:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40200872_4-tasties-namkeen-khatta-murukku-jantikalu.jpg",
+    name: "Namkeen - Khatta Murukku Jantikalu",
+    price: 49,
+    strikedoffPrice: 85,
+    deliveryTime: " Standard Delivery: 21 Jan, 2:00PM - 4:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40160401_4-tasties-mini-kachori.jpg",
+    name: "Mini Kachori",
+    price:69,
+    strikedoffPrice: 99,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40196818_3-tasties-nacho-chips-cheese.jpg",
+    name: "Nacho Chips - Cheese",
+    price: 45,
+    strikedoffPrice: 75,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40115859_8-tasties-namkeen-moong-dal.jpg",
+    name: "Namkeen - Moong Dal",
+    price:37,
+    strikedoffPrice: 49,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40200874_3-tasties-namkeen-banana-pepper-chips.jpg",
+    name: "Namkeen - Banana Pepper Chips ",
+    price:51,
+    strikedoffPrice: 55,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40115856_10-tasties-namkeen-khatta-meetha.jpg",
+    name: "Namkeen - Khatta Meetha",
+    price:36,
+    strikedoffPrice: 49,
+    deliveryTime: "Standard Delivery: 21 Jan, 2:00PM - 4:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40130162_8-gooddiet-nutrition-energy-bar-gojiberry-blackcurrant-cashews.jpg",
+    name: "Nutrition Energy Bar - Gojiberry, Blackcurrant & Cashews",
+    price: 35,
+    strikedoffPrice: 52,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40120129_1-tasties-khatai-two-in-one.jpg",
+    name: "Khatai - Two In One",
+    price: 65,
+    strikedoffPrice: 115,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40183669_3-gooddiet-20g-whey-protein-bar-cranberry-orange.jpg",
+    name: "20g Whey Protein Bar - Cranberry Orange",
+    price: 99,
+    strikedoffPrice: 135,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40203073_3-gooddiet-multigrain-energy-bar-blueberry-delight.jpg",
+    name: "Multigrain Energy Bar Blueberry Delight",
+    price: 29,
+    strikedoffPrice: 49,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40112426_8-gooddiet-snacks-roasted-peanuts-olive-n-herbs.jpg",
+    name: "Snacks - Roasted Peanuts Olive N' Herbs",
+    price: 99,
+    strikedoffPrice:105,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40162617_8-gooddiet-roasted-flaxseed-black-salt.jpg",
+    name: "Roasted Flaxseed - Black Salt",
+    price: 36,
+    strikedoffPrice: 46,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40130164_8-gooddiet-nutrition-energy-bar-tropical-mango-ginger-sesame-seeds.jpg",
+    name: "Nutrition Energy Bar - Tropical Mango, Ginger & Sesame Seeds",
+    price: 87,
+    strikedoffPrice: 103,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40094949_8-fresho-signature-coconut-rice-crisps-cookies.jpg",
+    name: "Coconut Rice Crisps Cookies",
+    price: 149,
+    strikedoffPrice: 195,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40177080_5-tasties-fruit-nuts-cookies.jpg",
+    name: "Cookies - Dark Chocochip, Chewy",
+    price: 180,
+    strikedoffPrice: 220,
+    deliveryTime: "Standard Delivery: Tomorrow 12:00PM-3:00PM ",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40112430_16-gooddiet-snacks-roasted-melon-n-flaxseeds.jpg",
+    name: "Dry Fruit Mixed Chatpata",
+    price: 65,
+    strikedoffPrice: 86,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ },
+ {
+    image_url: "https://www.bigbasket.com/media/uploads/p/mm/40112430_16-gooddiet-snacks-roasted-melon-n-flaxseeds.jpg",
+    name: "Dry Fruit Mixed Chatpata",
+    price: 65,
+    strikedoffPrice: 103,
+    deliveryTime: " Standard Delivery: Tomorrow 12:00PM-3:00PM",
+ }
+ 
+];
+
+   localStorage.setItem("snackDATA",JSON.stringify(snackArr))
+   
+
+   var fruits_vegetable = [
+  {
+      image_url: "https://www.bigbasket.com/media/uploads/p/s/40218332_1-fresho-grapes-green-seedless-sonaka.jpg ",
+      name: "Grapes- Green Seedless, Sonaka ",
+      price: " 43",
+      off_price: "68 ",
+  },
+  {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000384_9-fresho-orange-kinnow.jpg ",
+    name: "Orange - Kinnow ",
+    price: " 57",
+    off_price: "93.75 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000263_11-fresho-strawberry.jpg ",
+    name: " Strawberry",
+    price: "52 ",
+    off_price: "80 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000381_10-fresho-carrot-red.jpg ",
+    name: " Carrot - Red",
+    price: "36.36 ",
+    off_price: " 65",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000283_11-fresho-green-peas.jpg",
+    name: "Green Peas ",
+    price: " 30",
+    off_price: "37.50 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000152_20-fresho-papaya-medium.jpg ",
+    name: "Papaya - Medium ",
+    price: " 53.54",
+    off_price: "66.92 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000148_30-fresho-onion.jpg ",
+    name: " Onion",
+    price: "38.38 ",
+    off_price: "66.25 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000200_17-fresho-tomato-hybrid.jpg ",
+    name: "Tomato - Hybrid ",
+    price: "28.28 ",
+    off_price: "37.50 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000203_16-fresho-tomato-local.jpg ",
+    name: "Tomato - Local ",
+    price: "24.24 ",
+    off_price: "32.82 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40022647_4-fresho-papaya-organically-grown.jpg ",
+    name: "Papaya - Organically Grown ",
+    price: "60 ",
+    off_price: "75 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/30000609_11-fresho-tomato-green.jpg ",
+    name: " Tomato - Green",
+    price: "14.50 ",
+    off_price: "20 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000074_19-fresho-cauliflower.jpg ",
+    name: "Cauliflower ",
+    price: "17.17 ",
+    off_price: "25 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000066_25-fresho-cabbage.jpg",
+    name: " Cabbage",
+    price: "32.32 ",
+    off_price: " 43.75",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000044_42-fresho-beans-french-ring.jpg ",
+    name: "Beans - French, Ring ",
+    price: " 28",
+    off_price: "35 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40125301_5-fresho-papaya-large.jpg ",
+    name: "Papaya - Large ",
+    price: "82.60 ",
+    off_price: "111.25 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000166_16-fresho-radish-white.jpg",
+    name: " Radish - White",
+    price: "10.10 ",
+    off_price: "13.75 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/20000981_6-fresho-spring-onion-with-roots.jpg ",
+    name: " Spring Onion - With roots",
+    price: "5.68 ",
+    off_price: " 11.25",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000188_12-fresho-palak-cleaned-without-roots.jpg ",
+    name: "Palak - Cleaned, without roots ",
+    price: "22.50 ",
+    off_price: "28.12 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000380_9-fresho-papaya-raw.jpg ",
+    name: "Papaya - Raw ",
+    price: "25 ",
+    off_price: "31.25 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000098_9-fresho-coriander-leaves.jpg ",
+    name: "Coriander Leaves ",
+    price: "10.10 ",
+    off_price: "18.75 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000137_19-fresho-mint-leaves-cleaned-without-roots.jpg ",
+    name: " Mint Leaves - Cleaned, without roots",
+    price: " 7",
+    off_price: "8.75 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000001_21-fresho-amaranthus-green-cleaned-without-roots.jpg ",
+    name: " Amaranthus - Green Cleaned, without roots",
+    price: "12.50 ",
+    off_price: "15.62 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/30000575_14-fresho-amaranthus-red-cleaned-without-roots.jpg ",
+    name: "Amaranthus - Red Cleaned, without roots ",
+    price: "16 ",
+    off_price: "20 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000025_27-fresho-banana-robusta.jpg ",
+    name: "Banana - Robusta ",
+    price: "30 ",
+    off_price: "37.50 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000031_21-fresho-banana-yelakki.jpg ",
+    name: " Banana - Yelakki",
+    price: " 54.54",
+    off_price: " 81.25",
+},
+
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000581_13-fresho-banana-red.jpg",
+    name: " Banana - Red",
+    price: "38.38 ",
+    off_price: "47.98 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/60000055_5-fresho-banana-karpooravalli.jpg ",
+    name: " Banana - Karpooravalli",
+    price: " 21",
+    off_price: " 26.25",
+},
+
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000046_17-fresho-beetroot.jpg",
+    name: " Beetroot",
+    price: "38.38 ",
+    off_price: "47.98 ",
+},
+
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/50000512_9-fresho-chilli-green-organically-grown.jpg",
+    name: "Chilli - Green, Organically Grown ",
+    price: "32 ",
+    off_price: " 40",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000082_19-fresho-chilli-green-long-medium.jpg ",
+    name: "Chilli - Green Long, Medium ",
+    price: "22.73 ",
+    off_price: "35 ",
+}
+]
+
+
+ 
+localStorage.setItem("fruits_vegetable",JSON.stringify(fruits_vegetable))
+// Data for fruits_vegetable is end here 
+
+// Data for meat is start from here 
+var meat = [
+  {
+      image_url: " https://www.bigbasket.com/media/uploads/p/s/40048913_4-fresho-mutton-curry-cut-from-whole-carcass-15-20-pcs-antibiotic-residue-free-growth-hormone-free.jpg",
+      name: "Mutton - Curry Cut, From Whole Carcass 15-20 pcs Antibiotic Residue-Free, Growth Hormone- ",
+      price: "833.00 ",
+      off_price: "800 ",
+  },
+  {
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000900_10-fresho-chicken-breast-boneless-antibiotic-residue-free-4-5-pcs.jpg ",
+    name: "Chicken Breast - Boneless, Antibiotic Residue-Free 4-5 pcs ",
+    price: " 229",
+    off_price: "298 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000756_34-fresho-rohu-fish-large-curry-cutbengali-cut-preservative-free-12-15-pcs.jpg ",
+    name: "Rohu Fish - Large, Curry Cut/Bengali Cut, Preservative Free, 12-15 pcs ",
+    price: "319 ",
+    off_price: " 350",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000904_8-fresho-chicken-drumstick-without-skin-antibiotic-residue-free-4-6-pcs.jpg",
+    name: "Chicken Drumstick - Without Skin, Antibiotic Residue-Free, 4-6 pcs ",
+    price: " 185",
+    off_price: "245 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/20003673_9-fresho-basa-fish-fillet-preservative-free.jpg",
+    name: "Basa Fish Fillet - Preservative Free ",
+    price: "292 ",
+    off_price: "385 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/10000908_15-fresho-chicken-curry-cut-without-skin-antibiotic-residue-free-13-15-pcs.jpg",
+    name: " Chicken - Curry Cut Without Skin, Antibiotic Residue Free, 13-15 pcs",
+    price: "100.00 ",
+    off_price: "181 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/10000703_33-fresho-mackerel-fish-large-whole-cleaned-preservative-free-3-4-pcs.jpg ",
+    name: "Mackerel Fish - Large, Whole Cleaned, Preservative Free, 3-4 pcs ",
+    price: "236 ",
+    off_price: " 365",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40005334_3-fresho-kolkata-pabda-whole-cleaned.jpg ",
+    name: "Kolkata Pabda - Whole Cleaned ",
+    price: "699 ",
+    off_price: "900 ",
+}
+]
+localStorage.setItem("meatDATA",JSON.stringify(meat))
+
+// Home and kitchen data starts from here 
+
+var home_kitchen  =[
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40227026_2-kaviraj-aluminium-induction-bottom-kadai-25-cm-28-l.jpg ",
+    name: "Aluminium Induction Bottom Kadai  ",
+    price: "449 ",
+    off_price: "1200 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40200079_4-nirlon-non-stick-cookware-set-tawakadaifry-pan-red.jpg",
+    name: " Non-Stick Cookware Set",
+    price: " 799",
+    off_price: " 1500",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40200044_7-prestige-svachh-aluminium-outer-lid-pressure-cooker-combo-common-lid-10783.jpg ",
+    name: "Svachh Aluminium Outer Lid Pressure Cooker Combo ",
+    price: "2299 ",
+    off_price: " 2780",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40228881_2-prestige-non-stick-cookware-set-with-glass-lid-byk-spatter-finish-black.jpg",
+    name: " Non-Stick Cookware Set With Glass Lid - BYK Spatter Finish, Black",
+    price: " 1649",
+    off_price: " 3400",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40178153_14-bb-home-stainless-stainless-steel-copper-bottom-cook-serve-handi-parpu-chetty-set.jpg",
+    name: " Stainless Stainless Steel Copper Bottom Cook & Serve Handi-Parpu Chetty Set",
+    price: "609 ",
+    off_price: "999 ",
+},
+
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40226182_1-storehaus-glass-for-whiskey-water-san-marino385-ml.jpg ",
+    name: " Glass For Whiskey / Water - San Marino,385 ml",
+    price: "329 ",
+    off_price: "499 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40221977_1-yera-shot-glass-transparent.jpg ",
+    name: " Shot Glass - Transparent",
+    price: "89 ",
+    off_price: "275 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40134118_3-pasabahce-shot-glass-dance.jpg ",
+    name: "Shot Glass - Dance ",
+    price: " 399",
+    off_price: "564 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40136173_5-hi-luxe-bell-whisky-glass-set.jpg ",
+    name: "Bell Whisky Glass Set ",
+    price: "409 ",
+    off_price: "550 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40095286_7-rolex-cake-mould-combo-square-8-flower-75-round-65-aluminium-silver.jpg ",
+    name: "Cake Mould Combo - Square 8'', Flower 7.5'', Round 6.5, Aluminium, Silver ",
+    price: "329 ",
+    off_price: "630 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40178155_6-neelam-stainless-steel-dinner-set-laser-etched-floral.jpg ",
+    name: "Stainless Steel Dinner Set - Laser Etched Floral ",
+    price: "1399 ",
+    off_price: "2499 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40164379_5-pigeon-by-stovekraft-induction-base-aluminium-outer-lid-pressure-cooker-combo-12610.jpg",
+    name: "Induction Base Aluminium Outer Lid Pressure Cooker Combo - 12610 ",
+    price: "1149 ",
+    off_price: "1795 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40178534_1-nirlon-non-stick-fry-pan-240-mm-tawa-260mm-combo-granite-coating-black.jpg",
+    name: "Non-Stick Fry Pan 240 mm & Tawa 260mm Combo - Granite Coating, Black ",
+    price: "599 ",
+    off_price: "1599 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40183426_10-bb-home-stainless-steel-induction-bottom-topepatilabhagona-no-13.jpg ",
+    name: "Stainless Steel Induction Bottom Tope/Patila/Bhagona - No. 13 ",
+    price: "469 ",
+    off_price: "610 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40178161_14-bb-home-stainless-steel-kitchen-tools-turner-skimmer-ladle-hammered.jpg ",
+    name: "Stainless Steel Kitchen Tools - Turner + Skimmer + Ladle, Hammered ",
+    price: "249 ",
+    off_price: " 399",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40175060_10-bb-home-natural-grass-broomphool-jhadu.jpg",
+    name: " Natural Grass Broom/Phool Jhadu",
+    price: " 150",
+    off_price: "150 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40175061_10-bb-home-premium-soft-grass-broomphool-jhadu.jpg ",
+    name: " Premium Soft Grass Broom/Phool Jhadu",
+    price: "195 ",
+    off_price: "195 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40197514_2-claycraft-liza-coffee-mugs-super-s372.jpg",
+    name: "Liza Coffee Mugs - Super S372 ",
+    price: "429 ",
+    off_price: "429 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40065963_4-iveo-chai100-melamine-smart-coffee-mug-set-yellow.jpg ",
+    name: "Chai/100% Melamine Smart Coffee Mug Set - Yellow ",
+    price: " 579",
+    off_price: "579 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40189212_4-superware-melamine-ice-cream-bowl-set-green.jpg",
+    name: "Melamine Ice Cream Bowl Set - Green ",
+    price: "599 ",
+    off_price: "599 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40213527_1-iveo-100-melamine-tripple-sauce-dish-multi-colour-set.jpg ",
+    name: "100% Melamine Tripple Sauce Dish Multi Colour Set ",
+    price: "369 ",
+    off_price: " 369",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40200045_7-prestige-svachh-aluminium-outer-lid-pressure-cooker-combo-common-lid-10784.jpg ",
+    name: "Svachh Aluminium Outer Lid Pressure Cooker Combo- Common Lid, 10784 ",
+    price: "1649 ",
+    off_price: " 2050",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40214709_5-kitchen-essentials-triply-stainless-steel-kadai-with-glass-lid-24-cm.jpg ",
+    name: "Triply Stainless Steel Kadai - With Glass Lid, 24 cm ",
+    price: " 1799",
+    off_price: "3100 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40227062_1-nirlon-non-stick-kadai-240-mm-25-l-maroon.jpg",
+    name: "Non-Stick Kadai - 240 mm, 2.5 L, Maroon ",
+    price: " 429",
+    off_price: "800 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40172186_6-bb-home-popular-plastic-bathing-mug-pink.jpg",
+    name: "Popular Plastic Bathing Mug - Pink ",
+    price: "19 ",
+    off_price: "25 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40197169_6-bb-home-premium-stainless-steel-serrated-vegetable-knife-large-bbpk04.jpg ",
+    name: "Premium Stainless Steel Serrated Vegetable Knife - Large, BBPK04 ",
+    price: "99 ",
+    off_price: "100 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40197168_5-bb-home-premium-stainless-steel-serrated-kitchen-knife-large-multipurpose-bbpk03.jpg",
+    name: " Premium Stainless Steel Serrated Kitchen Knife - Large, Multipurpose BBPK03",
+    price: "99 ",
+    off_price: "195 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40134142_3-pasabahce-casablanca-shot-glass-tumbler.jpg ",
+    name: " Casablanca Shot Glass Tumbler",
+    price: "336 ",
+    off_price: "395 ",
+},
+{
+    image_url: "https://www.bigbasket.com/media/uploads/p/s/40095968_3-hi-luxe-elfine-whisky.jpg ",
+    name: " Elfine Whisky",
+    price: "349 ",
+    off_price: "595 ",
+},
+{
+    image_url: " https://www.bigbasket.com/media/uploads/p/s/40199887_6-asian-multipurpose-plastic-basket-for-fruitsvegetable-with-lid-assorted-colour.jpg",
+    name: " Multipurpose Plastic Basket For Fruits/Vegetable With Lid - Assorted Colour",
+    price: "448.99 ",
+    off_price: "677 ",
+}
+
+]
+localStorage.setItem("HomeKitchen",JSON.stringify(home_kitchen))
+
+
+
+
+</script>

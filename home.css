@@ -7,7 +7,7 @@ h1{
 #firstImg{
     height: 370px;
     width: 98%;
-    border: 1px solid black;
+    border: 1px solid transparent;
     background-image: url("https://www.bigbasket.com/media/uploads/banner_images/hp_sbf_m_snackingstore_460_251221.jpg");
     background-size: cover;
 }
@@ -15,14 +15,14 @@ h1{
     height: 50px;
     width: 60%;
     margin: auto;
-    border: 1px solid red;
+    border: 1px solid transparent;
     margin-top: 320px;
     display: flex;
 }
 #option_on_img>div{
     height: 100%;
     width: 14%;
-    border: 1px solid white;
+    border: 1px solid transparent;
     background-color: #e1dbd8;
     text-align: center;
     font-weight: bold;
@@ -39,7 +39,7 @@ h1{
 #opt_container>div{
     height: 60%;
     width: 14%;
-    border: 1px solid black;
+    border: 1px solid transparent;
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
@@ -112,7 +112,7 @@ h1{
 #bank_offer{
     height: 230px;
     width: 90%;
-    border: 1px solid black;
+    border: 1px solid transparent;
     display: flex;
     gap: 10px;
     margin: auto;
@@ -120,7 +120,7 @@ h1{
 #bank_offer>div{
     height: 100%;
     width: 24%;
-    border: 1px solid red;
+    border: 1px solid transparent;
 }
 #bank_offer>div:nth-child(1){
     background-image: url("https://www.bigbasket.com/media/customPage/8b73190c-8eda-4a77-b416-3b04e5bbec6e/054e730b-2605-4882-a4df-7722e87bdf89/0befa439-3778-47c8-96af-4cd19482f452/hp_aff_m_indus-1000_360_010122.jpg");
@@ -144,7 +144,7 @@ h1{
     #firstImg{
         height: 100px;
         width: 80%;
-        border: 1px solid black;
+        border: 1px solid transparent;
         background-image: url("https://www.bigbasket.com/media/uploads/banner_images/hp_sbf_m_snackingstore_460_251221.jpg");
         background-size: cover;
     }
@@ -152,7 +152,7 @@ h1{
         height: 20px;
         width: 60%;
         margin: auto;
-        border: 1px solid red;
+        border: 1px solid transparent;
         margin-top: 80px;
         display: flex;
     }
@@ -176,7 +176,7 @@ h1{
     #opt_container>div{
         height: 40%;
         width: 14%;
-        border: 1px solid black;
+        border: 1px solid transparent;
         font-size: 10px;
         font-weight: bold;
        

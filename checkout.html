@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        *{
+            padding-left: 20px;
+        }
+        .container{
+            height: 500px;
+            width: 450px;
+            border: 1px solid black;
+            background-color: lightgreen;
+        }
+        input,#card_type{
+            height: 40px;
+            width: 80%;
+            margin: auto;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+        #pay{
+            height: 50px;
+            width: 200px;
+           display: block;
+            margin-left: 60px;
+            border-radius: 20px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        #pay:hover{
+            background-color: cyan;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+    <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+<body>
+    <div class="container">
+         <h2><i class="fas fa-plus-circle"></i>Add Credit/Debit Card</h2>
+         <input type="text" placeholder="Card holder name">
+         <input type="text" placeholder="enter card number">
+         <select id="card_type">
+             <option>--select card type--</option>
+             <option>HDFC Credit Card</option>
+             <option>Debit Card</option>
+       <option>Amazon Pay Credit card</option>
+         </select>
+          <input type="text" placeholder="CVV Number">
+          <input type="text" placeholder="Valid upto"><br>
+          <button id="pay">Pay</button>
+    </div>
+</body>
+</html>      
+<script>
+    document.querySelector("#pay").addEventListener("click",function(){
+        window.location.href = "successful.html"
+    })
+</script>

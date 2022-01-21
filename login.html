@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+   <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+  <div class="container">
+     <p>Login using</p>
+      <p><i class="fab fa-facebook"></i>    <i class="fab fa-twitter-square"></i>   <i class="fab fa-google-plus"></i>  <i class="fas fa-envelope-open-text"></i></p>
+  </div>
+</html>
+<script>
+
+
+   form = document.createElement("form")
+
+   input1 = document.createElement("input")
+   input1.setAttribute("class","log_in")
+   input1.setAttribute("id","user")
+   input1.setAttribute("type","text")
+   input1.setAttribute("placeholder","enter your userName")
+
+   
+   input2 = document.createElement("input")
+   input2.setAttribute("class","log_in")
+   input2.setAttribute("id","pass")
+   input2.setAttribute("type","password")
+   input2.setAttribute("placeholder","enter your password")
+
+
+   input3 = document.createElement("input")
+   input3.setAttribute("class","log_in")
+   input3.setAttribute("type","text")
+   input3.setAttribute("placeholder","enter your registered mobile no.")
+
+  
+   input4 = document.createElement("input")
+   input4.setAttribute("id","log_btn")
+   input4.setAttribute("type","submit")
+   input4.setAttribute("value","Log in")
+
+   form.append(input1,input2,input3,input4)
+
+   document.querySelector(".container").append(form)
+
+
+   document.querySelector("form").addEventListener("submit",myLogin)
+
+   var regdUser = JSON.parse(localStorage.getItem("DataBase"))
+   
+   function myLogin(event){
+       event.preventDefault()
+       var email = document.querySelector("#user").value
+        var password = document.querySelector("#pass").value
+        
+
+        for(var i = 0;i < regdUser.length;i++){
+         if(regdUser[i].emailadd === email && regdUser[i].password === password){
+             window.location.href = "home.html"
+         }else{
+             alert("Wrong Details")
+         }
+        }
+   }
+</script>

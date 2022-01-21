@@ -1,0 +1,33 @@
+*{
+    text-align: center;
+}
+.container{
+  height: 400px;
+  width: 300px;
+  border: 1px solid transparent;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 50px;
+  background-color: lightblue;
+}
+.log_in{
+  height: 40px;
+  width: 80%;
+  border: 2px solid teal;
+  margin-top: 30px;
+  border-radius: 30px;
+}
+#log_btn{
+  height: 30px;
+  width: 50%;
+  margin-top: 40px;
+  background-color: teal;
+  color: white;
+  border-radius: 30px;
+}
+#log_btn:hover{
+  background-color: yellow;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}

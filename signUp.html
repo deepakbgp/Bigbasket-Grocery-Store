@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="signUp.css">
+    <script src="signUp.js"></script>
+</head>
+
+<body>
+<!--     
+     <div class="container">
+         <form> 
+             <h2>Sign Up</h2>
+             <input class="sign_form" type="text" placeholder="enter you name">
+             <input class="sign_form" type="text" placeholder="enter email address">
+             <input class="sign_form" type="password" placeholder="enter password">
+             <input class="sign_form" type="text" placeholder="enter Mobile no.">
+             <input id="button_sign" type="submit" value="Create Account">
+         </form>
+         <p id="for_login">Already have an account? <span>Sign in</span></p>
+     </div> -->
+
+</body>
+</html>
+<script>
+      div = document.createElement("div")
+    div.setAttribute("class","container")
+    form = document.createElement("form")
+ 
+
+    h2 = document.createElement("h2")
+    h2.textContent = "Sign Up"
+
+
+    input1 = document.createElement("input")
+    input1.setAttribute("class","sign_form")
+    input1.setAttribute("placeholder","enter your name")
+
+
+    input2 = document.createElement("input")
+    input2.setAttribute("class","sign_form")
+    input2.setAttribute("id","email")
+    input2.setAttribute("placeholder","enter your email")
+    
+
+    input3 = document.createElement("input")
+    input3.setAttribute("class","sign_form")
+    input3.setAttribute("id","pass")
+    input3.setAttribute("type","password")
+    input3.setAttribute("placeholder","enter password")
+
+    input4 = document.createElement("input")
+    input4.setAttribute("class","sign_form")
+    input4.setAttribute("id","mbl")
+    input4.setAttribute("placeholder","enter Mobile no.")
+
+    input5 = document.createElement("input")
+    input5.setAttribute("id","button_sign")
+    input5.setAttribute("type","submit")
+    input5.setAttribute("value","create Account")
+
+    div2 = document.createElement("div")
+    div2.setAttribute("id","bottom")
+    
+    div3 = document.createElement("div")
+    div3.setAttribute("id","first")
+    div3.textContent = "Already have an account?"
+
+    div4 = document.createElement("div")
+    div4.setAttribute("id","second")
+     div4.textContent = "Log in"
+    div2.append(div3,div4)
+
+    
+    form.append(input1,input2,input3,input4,input5)
+
+    div.append(h2,form,div2)
+    document.querySelector("body").append(div)
+
+
+    document.querySelector("form").addEventListener("submit",formSubmit)
+
+    var userStack = JSON.parse(localStorage.getItem("DataBase")) || []
+    function formSubmit(event){
+        event.preventDefault();
+        var email = document.querySelector("#email").value
+        var password = document.querySelector("#pass").value
+        var mobile = document.querySelector("#mbl").value
+
+        var userData = {
+            emailadd:email,
+            password:password,
+            mobile:mobile
+        }
+        userStack.push(userData)
+        
+        localStorage.setItem("DataBase",JSON.stringify(userStack))
+        alert("sign Up successfull")
+        window.location.href = "login.html"
+    }
+
+    document.querySelector("#second").addEventListener("click",myFun)
+    function myFun(){
+        window.location.href = "login.html"
+    }
+
+</script>

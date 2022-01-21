@@ -1,0 +1,85 @@
+#snack_container{
+    height: auto;
+    width: 95%;
+    border: 1px solid transparent;
+    display: flex;
+    margin: auto;
+    gap: 5px;
+}
+#snack_firstBox{
+    height: auto;
+    width: 26%;
+    border: 12px solid transparent;
+}
+#snack_secondBox{
+    height: 300px;
+    /* width: 74%; */
+    border: 1px solid transparent;
+    /* display: grid; */
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+#snackthird_box{
+    height: 100px;
+    width: 100%;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#snackforth_box{
+    height: auto;
+    width: 100%;
+    border: 1px solid transparent;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+#snackforth_box>div{
+    border: 1px solid transparent;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#snackforth_box>div:hover{
+    background-color: wheat;
+}
+
+#snackfont{
+      font-size: 30px;
+      text-align: center;
+      padding-top: 20px;
+      border: 1px solid transparent;
+  }
+  #option{
+    width: 250px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid transparent;
+    /* padding-top: 15px; */
+    margin-top: 15px;
+}
+#product_price{
+   display: flex;
+   justify-content: space-around;
+}
+#offPrice{
+   text-decoration: line-through;
+}
+#cartbtn{
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+#cart_opt{
+  /* font-size: 20px; */
+  border: 1px solid black;
+ margin-left: 60%;
+ padding-top: 10px;
+ border-radius: 30px;
+}
+#cart_opt:hover{
+   font-size: 20px;
+   background-color: black;
+   color: white;
+   cursor: pointer;
+}

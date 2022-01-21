@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+<body>
+
+    <!-- Navigation bar starts -->
+    <div class="container">
+        <div></div>
+       
+        <div id="box2">
+            <div id="cusLoc">
+              <div id="customer_no"> 1860 123 1000</div>
+              <div id="location">
+                  <div><i class="fas fa-map-marker-alt"></i></div>
+                  <div>
+                      <select>
+                          <option>560004,  Bangalore</option>
+                          <option>462026, Bhopal</option>
+                          <option>812001, Bhagalpur</option>
+                          <option>812003, Patna</option>
+                          <option>462034, Madhubani</option>
+                      </select>
+
+                  </div>
+              </div>
+            </div>
+            <div>
+                <input id="search_product" type="text" placeholder="Search any products...">
+                <input id="search" type="submit" value= "search">
+            </div>
+        </div>
+        <div id="box3">
+            <div id="sign_up">Sign Up/log in</div>
+            <div id="cartItem">
+                <div id="cart_size"><i class="fas fa-cart-plus"></i></div>
+                <div id="">
+                    <p>My Basket</p>
+                    <p>0 items</p>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <!-- Navigation bar ends -->
+
+
+  
+  
+</body>
+</html>
+<script>
+    document.querySelector("#sign_up").addEventListener("click",function(){
+        window.location.href = "signUp.html"
+    })
+
+    // navigation second part
+
+    div = document.createElement("div")
+    div.setAttribute("class","offers")
+
+    div1 = document.createElement("div")
+    div1.textContent = "Shop by catogery";
+
+    div2 = document.createElement("div")
+    div2.textContent = "Offers"
+
+    div3 = document.createElement("div")
+    div3.textContent = "BB Speciality"
+
+    div.append(div1,div2,div3)
+    document.querySelector("body").append(div)
+
+   
+
+    // Navigation Second part end
+
+    // Home page starts
+
+    // First part of the home page
+    div = document.createElement("div")
+    div.setAttribute("id","firstImg")
+
+    div1 = document.createElement("div")
+    div1.setAttribute("id","option_on_img")
+
+    div2 = document.createElement("div")
+    div2.textContent = "Offers on staples"
+
+    div3 = document.createElement("div")
+    div3.setAttribute("id","fruits_vegetable")
+    div3.textContent = "Fresho Fruits & Vegetables"
+
+    div4 = document.createElement("div")
+    div4.setAttribute("id","fresh_meat")
+     div4.textContent = "Fresho Meat"
+
+    div5 = document.createElement("div")
+    div5.textContent = "Fresho Fish"
+
+    div6 = document.createElement("div")
+    div6.textContent = "GoodDiet Choice"
+
+    div7 = document.createElement("div")
+    div7.setAttribute("id","snack_store")
+    div7.textContent = "Snacking store"
+
+    div8 = document.createElement("div")
+    div8.setAttribute("id","kitchen")
+    div8.textContent = "Home & Kitchen"
+
+    div1.append(div2,div3,div4,div5,div6,div7,div8)
+    div.append(div1)
+    document.querySelector("body").append(div)
+
+    document.querySelector("#snack_store").addEventListener("click",function(){
+        window.location.href = "snacking_store.html"
+    })
+
+    document.querySelector("#fruits_vegetable").addEventListener("click",function(){
+        window.location.href = "FruitsAndVegetables.html"
+    })
+
+    document.querySelector("#fresh_meat").addEventListener("click",function(){
+        window.location.href = "meat_page.html"
+    })
+
+    document.querySelector("#kitchen").addEventListener("click",function(){
+        window.location.href = "homeKitchen.html"
+    })
+
+    
+// First part home page completed
+
+
+// Starts: options in home page bottom of the first image 
+option = document.createElement("div")
+option.setAttribute("id","opt_container")
+
+divegg = document.createElement("div")
+divegg.setAttribute("id","eggMeat")
+divegg.textContent = "Eggs,Meat and Fish"
+divpic = document.createElement("div")
+divpic.setAttribute("id","divpic")
+divpre = document.createElement("div")
+divpre.textContent = "Precautionary measures"
+divfree = document.createElement("div")
+divfree.textContent = "Frequently Asked Questions"
+divcombo = document.createElement("div")
+divcombo.textContent = "Combo Store"
+divdeal = document.createElement("div")
+divdeal.textContent = "Deals of the week"
+
+option.append(divegg,divpic,divpre,divfree,divcombo,divdeal)
+document.querySelector("body").append(option)
+
+    document.querySelector("#eggMeat").addEventListener("click",function(){
+        window.location.href = "meat_page.html"
+    })
+
+// End: options in home page bottom of the first image 
+
+
+h1 = document.createElement("h1")
+h1.textContent = "My Smart Basket"
+h1.setAttribute("id","smartbskt")
+document.querySelector("body").append(h1)
+
+
+// Start: Sliding products on home page 
+divsl = document.createElement("div")
+divsl.setAttribute("id","sl_cont")
+ 
+divsl1= document.createElement("div")
+img1 = document.createElement("img")
+img1.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/10000148_30-fresho-onion.jpg")
+p1 = document.createElement("p")
+p1.textContent = "Onion - Medium/Pyaj"
+delivery_time1 = document.createElement("p")
+delivery_time1.textContent = "Standard Delivery: Tomarrow Morning"
+btn1 = document.createElement("button")
+btn1.textContent = "Add to cart"
+divsl1.append(img1,p1,delivery_time1,btn1)
+
+divsl2= document.createElement("div")
+img2 = document.createElement("img")
+img2.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/10000163_17-fresho-pumpkin-green.jpg")
+p2 = document.createElement("p")
+p2.textContent = "Pumpkin Green/Kaddu"
+delivery_time2 = document.createElement("p")
+delivery_time2.textContent = "Standard Delivery: Tomarrow Morning"
+btn2 = document.createElement("button")
+btn2.textContent = "Add to cart"
+divsl2.append(img2,p2,delivery_time2,btn2)
+
+divsl3= document.createElement("div")
+img3 = document.createElement("img")
+img3.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/10000283_11-fresho-green-peas.jpg")
+p3 = document.createElement("p")
+p3.textContent = "Green Peas Fresh/Mutter"
+delivery_time3 = document.createElement("p")
+delivery_time3.textContent = "Standard Delivery: Tomarrow Morning"
+btn3 = document.createElement("button")
+btn3.textContent = "Add to cart"
+divsl3.append(img3,p3,delivery_time3,btn3)
+
+divsl4= document.createElement("div")
+img4 = document.createElement("img")
+img4.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/10000066_25-fresho-cabbage.jpg")
+p4 = document.createElement("p")
+p4.textContent = "Cabbage Small/Pattagobhi"
+delivery_time4 = document.createElement("p")
+delivery_time4.textContent = "Standard Delivery: Tomarrow Morning"
+btn4 = document.createElement("button")
+btn4.textContent = "Add to cart"
+divsl4.append(img4,p4,delivery_time4,btn4)
+
+divsl5= document.createElement("div")
+img5 = document.createElement("img")
+img5.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/40048457_7-fresho-potato-new-crop.jpg")
+p5 = document.createElement("p")
+p5.textContent = "Potato - New Crop"
+delivery_time5 = document.createElement("p")
+delivery_time5.textContent = "Standard Delivery: Tomarrow Morning"
+btn5 = document.createElement("button")
+btn5.textContent = "Add to cart"
+divsl5.append(img5,p5,delivery_time5,btn5)
+
+divsl.append(divsl1,divsl2,divsl3,divsl4,divsl5)
+document.querySelector("body").append(divsl)
+
+// End: Sliding products on home page 
+
+// Starts offer poster 
+poster = document.createElement("div")
+poster.setAttribute("id","poster")
+
+document.querySelector("body").append(poster)
+
+// End offer poster 
+
+h1 = document.createElement("h1")
+h1.textContent = "Bank Offers"
+
+document.querySelector("body").append(h1)
+
+// Starts Bank Poster 
+
+divbank = document.createElement("div")
+divbank.setAttribute("id","bank_offer")
+
+bnk1= document.createElement("div")
+bnk2= document.createElement("div")
+bnk3= document.createElement("div")
+bnk4= document.createElement("div")
+
+divbank.append(bnk1,bnk2,bnk3,bnk4)
+
+document.querySelector("body").append(divbank)
+// End Bank poster 
+
+h1 = document.createElement("h1")
+h1.textContent = "Best Sellers"
+
+document.querySelector("body").append(h1)
+
+// Start Best Seller 
+divsl = document.createElement("div")
+divsl.setAttribute("id","sl_cont")
+ 
+divsl1= document.createElement("div")
+img1 = document.createElement("img")
+img1.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/100140858_6-figaro-pure-olive-oil.jpg")
+p1 = document.createElement("p")
+p1.textContent = "Pure Olive Oil"
+delivery_time1 = document.createElement("p")
+delivery_time1.textContent = "Standard Delivery: Tomarrow Morning"
+btn1 = document.createElement("button")
+btn1.textContent = "Add to cart"
+divsl1.append(img1,p1,delivery_time1,btn1)
+
+divsl2= document.createElement("div")
+img2 = document.createElement("img")
+img2.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/40057966_2-fresho-tender-coconut-medium.jpg")
+p2 = document.createElement("p")
+p2.textContent = "Tender Coconut/Nariyal Pani"
+delivery_time2 = document.createElement("p")
+delivery_time2.textContent = "Standard Delivery: Tomarrow Morning"
+btn2 = document.createElement("button")
+btn2.textContent = "Add to cart"
+divsl2.append(img2,p2,delivery_time2,btn2)
+
+divsl3= document.createElement("div")
+img3 = document.createElement("img")
+img3.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/40141637_5-pampers-premium-care-diapers-large.jpg")
+p3 = document.createElement("p")
+p3.textContent = "Premium Care Diapers - Large"
+delivery_time3 = document.createElement("p")
+delivery_time3.textContent = "Standard Delivery: Tomarrow Morning"
+btn3 = document.createElement("button")
+btn3.textContent = "Add to cart"
+divsl3.append(img3,p3,delivery_time3,btn3)
+
+divsl4= document.createElement("div")
+img4 = document.createElement("img")
+img4.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/40129677_7-pampers-diaper-pants-extra-large.jpg")
+p4 = document.createElement("p")
+p4.textContent = "Diaper Pants - Extra Large"
+delivery_time4 = document.createElement("p")
+delivery_time4.textContent = "Standard Delivery: Tomarrow Morning"
+btn4 = document.createElement("button")
+btn4.textContent = "Add to cart"
+divsl4.append(img4,p4,delivery_time4,btn4)
+
+divsl5= document.createElement("div")
+img5 = document.createElement("img")
+img5.setAttribute("src","https://www.bigbasket.com/media/uploads/p/s/241600_5-tata-salt-iodized.jpg")
+p5 = document.createElement("p")
+p5.textContent = "Tata Salt Salt - Iodized/Namak"
+delivery_time5 = document.createElement("p")
+delivery_time5.textContent = "Standard Delivery: Tomarrow Morning"
+btn5 = document.createElement("button")
+btn5.textContent = "Add to cart"
+divsl5.append(img5,p5,delivery_time5,btn5)
+
+divsl.append(divsl1,divsl2,divsl3,divsl4,divsl5)
+document.querySelector("body").append(divsl)
+// End Best Seller 
+</script>

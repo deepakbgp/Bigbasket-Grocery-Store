@@ -1,0 +1,54 @@
+
+*{
+    text-align: center;
+}
+.container{
+    height: 450px;
+    width: 330px;
+    border: 1px solid transparent;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    background-color: lightcyan;
+}
+.sign_form{
+    height: 50px;
+    width: 300px;
+    border: 2px solid black;
+    margin-top: 10px;
+    border-radius: 20px;
+  
+}
+
+#button_sign{
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #4605ef;
+    color: white;
+    border-radius: 20px;
+}
+
+#bottom{
+   height: 30px;
+   width: 100%;
+   border: 1px solid transparent;
+   display: flex;
+
+}
+#first{
+   height: 100%;
+   width: 60%;
+   border: 1px solid transparent;
+}
+#second{
+   height: 100%;
+   width: 33%;
+   border: 1px solid transparent;
+   text-align: start;
+   font-weight: bold;
+}
+#second:hover{
+   cursor: pointer;
+}

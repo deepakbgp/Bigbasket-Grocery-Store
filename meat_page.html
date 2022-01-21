@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snacking_store</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="meat.css">
+<!-- style of snacking_store -->
+      <!-- style end of snacking_store  -->
+</head>
+<script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+<body>
+    
+    <!-- Navigation bar starts -->
+    <div class="container">
+        <div></div>
+       
+        <div id="box2">
+            <div id="cusLoc">
+              <div id="customer_no"> 1860 123 1000</div>
+              <div id="location">
+                  <div><i class="fas fa-map-marker-alt"></i></div>
+                  <div>
+                      <select>
+                          <option>560004,  Bangalore</option>
+                          <option>462026, Bhopal</option>
+                          <option>812001, Bhagalpur</option>
+                          <option>812003, Patna</option>
+                          <option>462034, Madhubani</option>
+                      </select>
+
+                  </div>
+              </div>
+            </div>
+            <div>
+                <input id="search_product" type="text" placeholder="Search any products...">
+                <input id="search" type="submit" value= "search">
+            </div>
+        </div>
+        <div id="box3">
+            <div id="sign_up">Sign Up/log in</div>
+            <div id="cartItem">
+                <div id="cart_size"><i class="fas fa-cart-plus"></i></div>
+                <div>
+                    <p>My Basket</p>
+                    <p  id="items_in_cart">0 items</p>
+                </div>
+            </div>
+        </div>
+   </div>
+
+   
+
+</body>
+</html>
+<script>
+    
+      document.querySelector("#sign_up").addEventListener("click",function(){
+        window.location.href = "signUp.html"
+    })
+
+    // navigation second part
+
+    div = document.createElement("div")
+    div.setAttribute("class","offers")
+
+    div1 = document.createElement("div")
+    div1.textContent = "Shop by catogery";
+
+    div2 = document.createElement("div")
+    div2.textContent = "Offers"
+
+    div3 = document.createElement("div")
+    div3.textContent = "BB Speciality"
+
+    div4 = document.createElement("div")
+    div4.setAttribute("id","cart_opt")
+    div4.textContent = "Go to cart"
+    div4.addEventListener("click",addcartFunc)
+    function addcartFunc(){
+        window.location.href = "cart.html"
+    }
+
+    div.append(div1,div2,div3,div4)
+    document.querySelector("body").append(div)
+
+   
+
+    // Navigation Second part end
+
+
+//    Snacking store page starts 
+
+    divs = document.createElement("div")
+    divs.setAttribute("id","snack_container")
+    box1 =document.createElement("div")
+    box1.textContent = "snack_firstBox"
+    box1.setAttribute("id","snack_firstBox")
+
+    box2 = document.createElement("div")
+   
+    box2.setAttribute("id","snack_secondBox")
+
+    box3= document.createElement("div")
+    box3.setAttribute("id","snackthird_box")
+
+    box4= document.createElement("div")
+    // box4.textContent = "box4"
+    box4.setAttribute("id","snackforth_box")
+
+    
+    
+    document.querySelector("body").append(divs)
+    document.querySelector("#snack_container").append(box1,box2)
+    box2.append(box3,box4)
+
+
+    // box for product search
+
+
+    divp = document.createElement("div")
+    divp.setAttribute("id","snackfont")
+    divp.textContent = "Fresh meat(32)"
+     
+    divsea = document.createElement("div")
+    
+
+    selecc = document.createElement("select")
+    selecc.setAttribute("id","option")
+    document.querySelector("#snackthird_box").append(divp,divsea)
+    divsea.append(selecc)
+
+    option1 = document.createElement("option")
+    option1.textContent = "popularity"
+    option2 = document.createElement("option")
+    option2.textContent = "Price- high to low"
+    option3 = document.createElement("option")
+    option3.textContent = "Price- low to high"
+    option4 = document.createElement("option")
+    option4.textContent = "alphabetical"
+    option5 = document.createElement("option")
+    option5.textContent = "Rupee Saving - high to low"
+    option6 = document.createElement("option")
+    option6.textContent = "Rupee Saving - low to high"
+    
+    document.querySelector("#option").append(option1,option2,option3,option4,option5,option6)
+    
+
+
+    // All products under box4
+    
+
+    var meat = JSON.parse(localStorage.getItem("meatDATA"))
+   var cartArray = JSON.parse(localStorage.getItem("cartItems")) || []
+    meat.map(function(data){
+       var prodiv = document.createElement("div")
+    //    image creation 
+       proImage = document.createElement("img")
+       proImage.setAttribute("src",data.image_url)
+    //    product name creation 
+       productName = document.createElement("p")
+       productName.textContent = data.name
+        // price creation 
+        div_price = document.createElement("div")
+        div_price.setAttribute("id","product_price")
+        divmrp = document.createElement("div")
+        divmrp.textContent = data.price
+        divoff = document.createElement("div")
+        divoff.setAttribute("id","offPrice")
+        divoff.textContent = data.off_price
+
+       div_price.append(divmrp,divoff)
+
+    //    create delivery time 
+    var del = document.createElement("div")
+    del.textContent = "Standard Delivery: Monday 9:00AM to 7:00PM"
+
+    //    create Add to cart button 
+        btn = document.createElement("button")
+        btn.setAttribute("id","cartbtn")
+        btn.textContent = "Add to Cart"
+        
+        btn.addEventListener("click",function(){
+            addtocart(data)
+        })
+        
+
+       prodiv.append(proImage,productName,div_price,del,btn)
+       document.querySelector("#snackforth_box").append(prodiv)
+   })
+   
+    function addtocart(data){
+        cartArray.push(data)
+        localStorage.setItem("cartItems",JSON.stringify(cartArray))
+        alert("added successfully")
+    } 
+    
+
+
+
+//    Meat page end
+
+
+
+</script>
